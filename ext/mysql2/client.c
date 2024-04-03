@@ -49,8 +49,8 @@ static ID intern_brackets, intern_merge, intern_merge_bang, intern_new_with_args
  * variable to use, but MYSQL_SERVER_VERSION gives the correct numbers when
  * linking against the server itself
  */
-#if defined(MARIADB_CLIENT_VERSION_STR)
-  #define MYSQL_LINK_VERSION MARIADB_CLIENT_VERSION_STR
+#if defined(MARIADB_PACKAGE_VERSION)
+  #define MYSQL_LINK_VERSION MARIADB_PACKAGE_VERSION
 #elif defined(LIBMYSQL_VERSION)
   #define MYSQL_LINK_VERSION LIBMYSQL_VERSION
 #else
